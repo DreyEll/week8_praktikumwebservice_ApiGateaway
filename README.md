@@ -110,18 +110,6 @@ API Gateway :8080
 
 Prefix `/events` dan `/orders` dihapus sebelum request diteruskan. Contoh: `/events/events` dari gateway diteruskan ke Event Service sebagai `/events`.
 
-## 6. Refleksi
-
-API Gateway menyediakan satu alamat masuk bagi klien untuk mengakses Event Service dan Order Service. Gateway juga dapat menerapkan rate limiting dan pemeriksaan API key sebelum request diteruskan. Namun, jika gateway mati, klien tidak dapat mengakses kedua service melalui pintu masuk tersebut sampai gateway kembali aktif.
-
-## 7. Checklist pengumpulan
-
-- [ ] Repository berisi `gateway/gateway.js` dan `package.json`.
-- [ ] Screenshot Postman menunjukkan Event Service dapat diakses lewat port 8080.
-- [ ] Screenshot Postman menunjukkan Order Service memberikan 401 tanpa API key dan 200 dengan API key yang benar.
-- [ ] Screenshot script rate limiting menunjukkan status 429.
-- [ ] Diagram arsitektur dan refleksi singkat disertakan.
-
 ## Catatan penting
 
 Service dalam folder ini adalah implementasi contoh untuk demonstrasi tugas individu, disesuaikan dengan rancangan Platform Tiket Event/Konser. Ini belum terhubung ke kode layanan atau database proyek kelompok yang sebenarnya. Dokumen rancangan menyebut GraphQL untuk katalog event dan OAuth2 untuk token pengguna; implementasi praktikum ini menggunakan endpoint Express sederhana dan API key untuk menunjukkan routing, rate limiting, serta pemeriksaan akses dasar sesuai latihan API Gateway. Jangan menyatakan OAuth2 atau GraphQL sudah diimplementasikan dalam kode ini.
