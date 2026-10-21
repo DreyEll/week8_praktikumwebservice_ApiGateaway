@@ -1,0 +1,17 @@
+{
+  "name": "api-gateway-tiket-event",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Praktikum API Gateway untuk platform tiket event dan konser",
+  "scripts": {
+    "gateway": "node gateway/gateway.js",
+    "service:event": "node service-event/server.js",
+    "service:order": "node service-order/server.js",
+    "test:rate": "node test-rate-limit.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "http-proxy-middleware": "^3.0.5"
+  }
+}
